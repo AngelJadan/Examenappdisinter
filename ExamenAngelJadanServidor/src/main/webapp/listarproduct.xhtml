@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body>
+<h5>Listado de productos</h5>
+<h:form>
+	<h:dataTable value="#{gestionProducto.listar()}" var="datos">
+		<f:facet name="header">Id</f:facet>
+		#{datos.id}
+		<f:facet name="header">Nombre</f:facet>
+		#{datos.nombre}
+		<f:facet name="header">Cantidad</f:facet>
+		#{datos.cantidad}
+		<f:facet name="header">Tipo de unidad de medida</f:facet>
+		#{datos.unidadMedida}
+		<f:facet name="header">Medida</f:facet>
+		#{datos.medida}
+	</h:dataTable>
+</h:form>
+</body> 
+</html>
